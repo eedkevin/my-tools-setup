@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kevin.long/.oh-my-zsh"
+export ZSH="/Users/kevin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,10 +79,15 @@ golang
 helm
 iterm2
 yarn
+kube-ps1
+osx
 )
 
-PROMPT=$PROMPT'$(kube_ps1) '
 source $ZSH/oh-my-zsh.sh
+
+# kube-ps1 for k8s context on prompt
+PROMPT='$(kube_ps1)'$PROMPT
+__kubeoff
 
 # User configuration
 
@@ -109,9 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias kube="kubectl"
+
+# solve no matches found problem
+setopt no_nomatch
 
 source ~/.bash_profile
 
-# kube-ps1 for k8s context on prompt
-source ~/.kube-ps1.sh
-PROMPT='$(_kube_ps1)'$PROMPT
