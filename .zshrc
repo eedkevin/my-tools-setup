@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Disable compfix
+export ZSH_DISABLE_COMPFIX=true
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kevin/.oh-my-zsh"
@@ -7,7 +10,7 @@ export ZSH="/Users/kevin/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
@@ -70,24 +73,14 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
-brew
-history
+bundler
 node
-npm
+macos
 kubectl
-golang
-helm
-iterm2
-yarn
-kube-ps1
-osx
+z
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# kube-ps1 for k8s context on prompt
-PROMPT='$(kube_ps1)'$PROMPT
-__kubeoff
 
 # User configuration
 
@@ -115,9 +108,12 @@ __kubeoff
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias kube="kubectl"
+alias kb="kubectl"
+alias gitp="git branch --show-current | xargs git push --set-upstream origin"
+alias gitl="git branch --show-current | xargs git pull --set-upstream origin"
+alias gi="gopls implementation"
 
 # solve no matches found problem
 setopt no_nomatch
 
 source ~/.bash_profile
-
