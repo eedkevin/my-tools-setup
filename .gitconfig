@@ -1,0 +1,30 @@
+[alias]
+  co = checkout
+  cob = checkout -b
+  cm = commit
+  mm = commit -m
+  st = status
+  br = branch
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  bdd = branch -D
+  pll = pull
+  ll = pull
+  psh = push
+  pp = push
+  sth = stash
+  stp = stash pop
+  cpk = cherry-pick
+  df = diff
+  l = log
+  aa = add -A
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[pull]
+	ff = only
