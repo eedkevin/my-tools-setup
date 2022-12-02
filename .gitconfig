@@ -3,6 +3,7 @@
   cob = checkout -b
   cm = commit
   mm = commit -m
+  m = commit -m
   st = status
   br = branch
   b = branch
@@ -10,15 +11,20 @@
   bd = branch -d
   bdd = branch -D
   pll = pull
-  ll = pull
+  l = pull
   psh = push
   pp = push
+  p = push
   sth = stash
+  sh = stash
   stp = stash pop
+  sp = stash pop
   cpk = cherry-pick
+  pk = cherry-pick
   df = diff
-  l = log
+  lg = log
   aa = add -A
+  a = add -A
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

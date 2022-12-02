@@ -1,10 +1,8 @@
 {
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
     "workbench.iconTheme": "webstorm-icons",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.enablePreview": false,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 2000,
+    "files.autoSaveDelay": 5000,
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
     "editor.minimap.renderCharacters": false,
@@ -16,24 +14,39 @@
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
     "todo-tree.highlights.enabled": false,
-    "go.useLanguageServer": true,
-    "go.formatTool": "gofmt",
+    "go.formatTool": "goimports",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "python.formatting.provider": "autopep8",
-    "todo-tree.tree.showScanModeButton": false,
     "[go]": {
         "editor.formatOnSave": true
     },
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
-    "java.semanticHighlighting.enabled": true,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "redhat.telemetry.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
+    "java.project.importHint": false,
+    "go.docsTool": "gogetdoc",
+    "go.useLanguageServer": false,
+    "quarkus.tools.alwaysShowWelcomePage": false,
+    "workbench.startupEditor": "none",
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "workbench.editor.showTabs": false,
+    "workbench.editor.enablePreview": false,
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }
