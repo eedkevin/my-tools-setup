@@ -25,6 +25,7 @@
   lg = log
   aa = add -A
   a = add -A
+  undo = reset --soft HEAD~
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
